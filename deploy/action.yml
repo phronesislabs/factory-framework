@@ -11,4 +11,3 @@ inputs:
 runs:
   using: node24
   main: src/index.js
-  post: src/index.js

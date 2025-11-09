@@ -2,6 +2,7 @@ on:
   workflow_run:
     workflows: [ci.yml]
     types: [completed]
+    branches: [main]
 
 jobs:
   deploy-qa:
