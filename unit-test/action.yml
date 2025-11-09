@@ -1,0 +1,13 @@
+name: 'Unit Test'
+description: 'Unit tests'
+outputs:
+  result:
+    description: 'The number of tests passed and failed'
+  coverage:
+    description: 'The code coverage of the tests'
+  execution-time:
+    description: 'The execution time of the tests'
+runs:
+  using: node24
+  main: src/index.js
+  post: src/index.js

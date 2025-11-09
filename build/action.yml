@@ -1,0 +1,13 @@
+name: 'Build'
+description: 'Build, scan, tag, and publish container image'
+outputs:
+  image:
+    description: 'The container image'
+  tag:
+    description: 'The tag of the container image'
+  result:
+    description: 'The ultimate result of the build process (success or failure)'
+runs:
+  using: node24
+  main: src/index.js
+  post: src/index.js
