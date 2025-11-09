@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - uses: actions/checkout@v08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@v5
       - uses: phronesislabs/deploy@v0.0.1
         with:
           environment: qa
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-qa
     steps:
-      - uses: actions/checkout@v08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@v5
       - uses: phronesislabs/deploy@v0.0.1
         with:
           environment: staging
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-staging
     steps:
-      - uses: actions/checkout@v08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@v5
       - uses: phronesislabs/deploy@v0.0.1
         with:
           environment: production
